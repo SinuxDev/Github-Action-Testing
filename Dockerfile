@@ -29,4 +29,4 @@ EXPOSE 80
 
 # Command to start tini, then the Node.js app in the background, and NGINX in the foreground
 ENTRYPOINT ["/sbin/tini", "--"]
-CMD ["sh", "-c", "node /app/server.js & nginx -g 'daemon off;'"]
+CMD ["sh", "-c", "sleep 2 && node /app/server.js & nginx -g 'daemon off;'"]
